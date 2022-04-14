@@ -7,7 +7,7 @@ def canUnlockAll(boxes):
     keys = [0]
     unlocked = []
     while True:
-        if len(keys) == len(unlocked):
+        if keys == unlocked:
             break
         for key in keys:
             if key not in unlocked:
