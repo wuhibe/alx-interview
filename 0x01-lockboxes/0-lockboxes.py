@@ -13,7 +13,7 @@ def canUnlockAll(boxes):
             if key not in unlocked:
                 unlocked.append(key)
         for ibox in unlocked:
-            if ibox >= len(boxes) or ibox < 0:
+            if ibox >= len(boxes):
                 continue
             current = boxes[ibox]
             for bx in current:
