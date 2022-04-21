@@ -4,7 +4,7 @@
 
 def minOperations(n):
     ''' function to get the minimum operations '''
-    if n <= 1:
+    if n <= 1 or type(n) is not int:
         return 0
     x = factorize(n)
     sum = 0
@@ -32,7 +32,7 @@ def factorize(n):
 
 
 def is_prime(n):
-    ''' function to check if a number  is prime '''
+    ''' function to check if a number is prime '''
     i = 2
     while i < n:
         if n % i == 0:
