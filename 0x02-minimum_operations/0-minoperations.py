@@ -18,16 +18,13 @@ def factorize(n):
     temp = n
     x = 2
     li = []
-    while x <= n:
-        while x <= temp:
-            if temp % x == 0:
-                temp = temp / x
-                if (is_prime(x)):
-                    li.append(x)
-            else:
-                break
-        x += 1
-        temp = n
+    while x <= temp:
+        if temp % x == 0:
+            temp = temp / x
+            if (is_prime(x)):
+                li.append(x)
+        else:
+            x += 1
     return li
 
 
