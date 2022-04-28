@@ -24,7 +24,7 @@ try:
                 sc_dict[code] += 1
                 filesize = int(rline[8])
                 total += filesize
-                counter += 1
+            counter += 1
         if counter == 10:
             counter = 0
             print_data(total)
