@@ -19,10 +19,10 @@ try:
     for line in sys.stdin:
         rline = line.split(" ")
         if len(rline) > 4:
-            code = rline[7]
+            code = rline[-2]
             if code in sc_dict.keys():
                 sc_dict[code] += 1
-                filesize = int(rline[8])
+                filesize = int(rline[-1])
                 total += filesize
             counter += 1
         if counter == 10:
