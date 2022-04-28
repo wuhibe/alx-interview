@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 ''' module for log parsing '''
+
+
 import sys
 total = 0
 counter = 0
@@ -8,7 +10,7 @@ sc_dict = {'200': 0, '301': 0, '400': 0, '401': 0,
 
 
 def print_data(total):
-    ''' function to print stats '''
+    ''' function to print statistics for input '''
     print('File size: {}'.format(total))
     for key, value in sorted(sc_dict.items()):
         if value != 0:
@@ -22,8 +24,8 @@ try:
             code = rline[-2]
             if code in sc_dict.keys():
                 sc_dict[code] += 1
-                filesize = int(rline[-1])
-                total += filesize
+            filesize = int(rline[-1])
+            total += filesize
             counter += 1
         if counter == 10:
             counter = 0
