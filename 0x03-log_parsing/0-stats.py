@@ -10,7 +10,7 @@ sc_dict = {200: 0, 301: 0, 400: 0, 401: 0,
 def print_data(total):
     ''' function to print stats '''
     print('File size: {}'.format(total))
-    for key, value in sc_dict.items():
+    for key, value in sorted(sc_dict.items()):
         if value != 0:
             print('{}: {}'.format(key, value))
 
