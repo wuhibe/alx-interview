@@ -18,7 +18,7 @@ def print_data(total):
 try:
     for line in sys.stdin:
         rline = line.split(" ")
-        if len(rline) == 9:
+        if len(rline) > 4:
             code = rline[7]
             if code in sc_dict.keys():
                 sc_dict[code] += 1
