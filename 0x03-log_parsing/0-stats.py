@@ -3,8 +3,8 @@
 import sys
 total = 0
 counter = 0
-sc_dict = {200: 0, 301: 0, 400: 0, 401: 0,
-           403: 0, 404: 0, 405: 0, 500: 0}
+sc_dict = {'200': 0, '301': 0, '400': 0, '401': 0,
+           '403': 0, '404': 0, '405': 0, '500': 0}
 
 
 def print_data(total):
@@ -19,7 +19,7 @@ try:
     for line in sys.stdin:
         rline = line.split(" ")
         if len(rline) == 9:
-            code = int(rline[7])
+            code = rline[7]
             if code in sc_dict.keys():
                 sc_dict[code] += 1
                 filesize = int(rline[8])
