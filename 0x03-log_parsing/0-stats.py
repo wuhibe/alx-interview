@@ -19,10 +19,11 @@ try:
     for line in sys.stdin:
         rline = line.split(" ")
         if len(rline) == 9:
-            sc_dict[int(rline[7])] += 1
-            # increase value of status code in dict
-            total += int(rline[8])
-            # add filesize to total
+            code = int(rline[7])
+            if code in sc_dict.keys():
+                sc_dict[code] += 1
+            filesize = int(rline[8])
+            total += filesize
             counter += 1
         if counter == 10:
             counter = 0
