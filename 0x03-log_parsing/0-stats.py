@@ -22,9 +22,9 @@ try:
             code = int(rline[7])
             if code in sc_dict.keys():
                 sc_dict[code] += 1
-            filesize = int(rline[8])
-            total += filesize
-            counter += 1
+                filesize = int(rline[8])
+                total += filesize
+                counter += 1
         if counter == 10:
             counter = 0
             print_data(total)
