@@ -28,7 +28,7 @@ try:
         if counter == 10:
             counter = 0
             print_data(total)
-except Exception:
+except Exception as ex:
     pass
 finally:
     print_data(total)
