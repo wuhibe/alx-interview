@@ -8,7 +8,7 @@ def validUTF8(data):
     for item in lst:
         if len(item) > 8 and item[0] == 0:
             return False
-        start = int(item[0:5])
-        if start > 11110:
+        start = int(item)
+        if start > 11110000:
             return False
     return True
