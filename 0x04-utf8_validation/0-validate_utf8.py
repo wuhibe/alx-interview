@@ -9,6 +9,6 @@ def validUTF8(data):
         if len(item) > 8 and item[0] == 0:
             return False
         start = int(item)
-        if start > 11110000:
+        if start > 11110 and len(item) > 7:
             return False
     return True
