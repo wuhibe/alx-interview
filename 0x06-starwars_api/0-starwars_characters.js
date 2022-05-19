@@ -7,9 +7,9 @@ request(url, function (error, response, body) {
   if (error) {
     console.log(error);
   } else {
-    const abc = JSON.parse(body);
-    abc.characters.forEach(function (item, index, array) {
-      request(item, function (error, response, content) {
+    const abc = JSON.parse(body).characters;
+    for (let i = 0; i < abc.length; i++) {
+      request(abc[i], function (error, response, content) {
         if (error) {
           console.log(error);
         } else {
@@ -17,6 +17,6 @@ request(url, function (error, response, body) {
           console.log(result.name);
         }
       });
-    });
+    }
   }
 });
