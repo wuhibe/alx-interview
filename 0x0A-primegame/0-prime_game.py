@@ -5,14 +5,11 @@
 def isWinner(x, nums: list):
     """ method to find the winner of x games between maria and ben
     """
-    if x < 0 or not nums:
+    if x < 0 or not nums or x != len(nums):
         return None
-    count = 1
     b = 0
     m = 0
     for n in nums:
-        if count > x:
-            break
         arr = [i for i in range(2, n + 1)]
         who = True
         for n in arr:
@@ -25,7 +22,6 @@ def isWinner(x, nums: list):
             b += 1
         else:
             m += 1
-        count += 1
     if b > m:
         return 'Ben'
     elif m > b:
