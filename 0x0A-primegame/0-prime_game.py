@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" module for prime game task """
 
 
 def isWinner(x, nums: list):
