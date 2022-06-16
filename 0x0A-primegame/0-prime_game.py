@@ -10,6 +10,8 @@ def isWinner(x, nums: list):
     b = 0
     m = 0
     for n in nums:
+        if n == 0:
+            continue
         arr = [i for i in range(2, n + 1)]
         who = True
         for n in arr:
